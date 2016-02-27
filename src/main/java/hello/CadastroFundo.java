@@ -5,7 +5,7 @@ public class CadastroFundo {
 	private String cnpj;
 	private String nome;
 	private double valorCota;
-	
+
 	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
@@ -18,19 +18,23 @@ public class CadastroFundo {
 		this.valorCota = valorCota;
 	}
 
-	public CadastroFundo() {}
-	
+	public CadastroFundo() {
+	}
+
 	public CadastroFundo(String cnpj, String nome, double valorCota) {
 		this.cnpj = cnpj;
 		this.nome = nome;
 		this.valorCota = valorCota;
 	}
+
 	public String getCnpj() {
 		return cnpj;
 	}
+
 	public String getNome() {
 		return nome;
 	}
+
 	public double getValorCota() {
 		return valorCota;
 	}
@@ -39,6 +43,5 @@ public class CadastroFundo {
 	public String toString() {
 		return "CadastroFundo [cnpj=" + cnpj + ", nome=" + nome + ", valorCota=" + valorCota + "]";
 	}
-	
-	
+
 }
