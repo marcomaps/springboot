@@ -24,8 +24,13 @@ public class FundoController {
 	}
 
 	@RequestMapping("/fundo/cadastro")
-	public Collection<CadastroFundo> find(@RequestParam(required = false) String cnpj) {
-		return cnpj == null ? fundoRepository.findAll() : Arrays.asList(fundoRepository.find(cnpj));
+	public CadastroFundo find(@RequestParam String cnpj) {
+		return fundoRepository.find(cnpj);
+	}
+	
+	@RequestMapping("/fundo/cadastro/todos")
+	public Collection<CadastroFundo> findAll() {
+		return fundoRepository.findAll();
 	}
 
 	// curl --data '{"cnpj" : "6", "nome" : "FUNDO 6", "valorCota" : "6.66"}'

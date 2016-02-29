@@ -19,7 +19,6 @@ public class FundoRepository {
 		add(new CadastroFundo("5", "FUNDO 5", 5.55d));
 	}
 
-	
 	public CadastroFundo add(CadastroFundo cad) {
 		fundos.put(cad.getCnpj(), cad);
 		return cad;
